@@ -7,6 +7,11 @@
 
 <style>
 
+html{
+    scroll-behavior:smooth;
+}
+
+
 body{
     margin:0;
     font-family:Arial,sans-serif;
@@ -104,7 +109,54 @@ header{
     color:#d81f26;
 }
 
+
+.quote-btn{
+    background:white;
+    color:black;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:5px;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+.quote-section{
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+    scroll-margin-top:140px;
+}
+
+.quote-section h2{
+    text-align:center;
+    color:#d81f26;
+}
+
+.quote-section form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.quote-section input,
+.quote-section select,
+.quote-section textarea{
+    padding:15px;
+    font-size:16px;
+}
+
+.quote-section button{
+    background:#d81f26;
+    color:white;
+    border:none;
+    padding:18px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
 footer{
+
     background:black;
     text-align:center;
     padding:30px;
@@ -119,9 +171,14 @@ footer{
 <header>
     <div class="logo">RNM Garage Doors</div>
 
+    <div>
     <a href="tel:2817617803" class="call-btn">
         Call Now
     </a>
+    <a href="#quote-form" class="quote-btn">
+        Get Quote
+    </a>
+</div>
 </header>
 
 <section class="hero">
@@ -139,6 +196,37 @@ footer{
     <a href="tel:2817617803">
         Call (281) 761-7803
     </a>
+
+</section>
+
+
+<section id="quote-form" class="quote-section">
+
+<h2>Request a Free Quote</h2>
+
+<form action="https://formsubmit.co/info@fixwithrnm.com" method="POST">
+
+<input type="hidden" name="_subject" value="New Quote Request - RNM Garage Doors">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<input type="email" name="email" placeholder="Email Address">
+
+<select name="service">
+<option>Garage Door Repair</option>
+<option>Spring Replacement</option>
+<option>Opener Repair</option>
+<option>New Installation</option>
+<option>Maintenance</option>
+</select>
+
+<textarea name="details" rows="6" placeholder="Tell us about your garage door issue"></textarea>
+
+<button type="submit">Request Free Estimate</button>
+
+</form>
 
 </section>
 
